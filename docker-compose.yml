@@ -1,0 +1,39 @@
+version: '2'
+services:
+  cuda:
+    image: example_img:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY=novnc:0.0
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: "nvidia"
+            device_ids: ["0", "1"]
+            capabilities: [gpu]
+    depends_on:
+      - novnc
+    networks:
+      - x11
+    #command: tail -F /dev/null
+    stdin_open: true
+    tty: true
+    volumes:
+      - ~/projects/:/root/projects
+      - ~/Dropbox/mlops:/root/mlops
+
+  novnc:  
+    image: theasp/novnc:latest
+    environment:
+      # Adjust to your screen size
+      - DISPLAY_WIDTH=1920
+      - DISPLAY_HEIGHT=1080
+    ports:
+      - "8080:8080"
+    networks:
+      - x11
+networks:
+  x11:
