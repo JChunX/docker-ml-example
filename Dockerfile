@@ -13,7 +13,7 @@ RUN apt install -y --no-install-recommends \
     tar xzf Python-3.10.8.tgz && \
     cd Python-3.10.8 && \
     ./configure --enable-optimizations && \
-    make altinstall
+    make install
 
 ENV TORCH_CUDA_ARCH_LIST="Ampere;Turing;Pascal"
 ENV FORCE_CUDA="1"
