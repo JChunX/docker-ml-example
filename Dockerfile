@@ -29,3 +29,4 @@ RUN chmod 755 /etc/entrypoint.sh
 ENTRYPOINT ["/etc/entrypoint.sh"]
 
 RUN echo "cd ~/projects" >> ~/.bashrc
+RUN echo "alias python=python3" >> ~/.bashrc
