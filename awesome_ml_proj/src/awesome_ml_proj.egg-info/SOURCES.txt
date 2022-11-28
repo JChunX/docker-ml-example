@@ -1,0 +1,5 @@
+setup.py
+src/awesome_ml_proj.egg-info/PKG-INFO
+src/awesome_ml_proj.egg-info/SOURCES.txt
+src/awesome_ml_proj.egg-info/dependency_links.txt
+src/awesome_ml_proj.egg-info/top_level.txt
