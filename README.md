@@ -21,7 +21,7 @@ docker compose build
 
 ## Run 🚀
 
-If you are running this example in a remote machine, 
+If you are running this example in a remote machine and you want NoVNC virtual desktop, 
 your ssh login should look like this:
 
 `ssh -g -L <port>:localhost:8080 <username>@<ip.addr>`
