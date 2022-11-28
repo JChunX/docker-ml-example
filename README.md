@@ -5,7 +5,7 @@ Try running your experiments in a Docker container instead!
 
 This repo shows you how to build Docker images and run containers ✅
 
-## Prerequisites
+## Prerequisites 🐳
 
 [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
 
