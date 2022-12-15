@@ -23,6 +23,7 @@ ENV TORCH_CUDA_ARCH_LIST="Ampere;Turing;Pascal"
 ENV FORCE_CUDA="1"
 
 COPY awesome_ml_proj/requirements.txt /etc/requirements.txt
+RUN python3 -m pip install --upgrade pip
 RUN --mount=type=cache,target=/root/.cache/pip python3 -m pip install -r /etc/requirements.txt
 
 COPY docker/entrypoint.sh /etc/entrypoint.sh
